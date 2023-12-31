@@ -17,28 +17,14 @@ console.log('You chose:', caseFix(playerChoice));
 
 function scoring() {
 
-    console.log(The cpuChoice);
+    console.log('The computer chose:', cpuChoice);
 
-    if (caseFix(playerChoice) == 'Rock' && cpuChoice == 'Paper') {
+    if ((caseFix(playerChoice) == 'Rock' && cpuChoice == 'Paper') || (caseFix(playerChoice) == 'Scissors' && cpuChoice == 'Rock') || (caseFix(playerChoice) == 'Paper' && cpuChoice == 'Scissors'))  {
         console.log('You lose');
-    } else if (caseFix(playerChoice) == 'Rock' && cpuChoice == 'Scissors') {
+    } else if ((caseFix(playerChoice) == 'Rock' && cpuChoice == 'Scissors') || (caseFix(playerChoice) == 'Scissors' && cpuChoice == 'Paper') || (caseFix(playerChoice) == 'Paper' && cpuChoice == 'Rock')) {
         console.log('You win!');
     } else {
         console.log('You tie');
     }
-    if (caseFix(playerChoice) == 'Scissors' && cpuChoice == 'Rock') {
-        console.log('You lose');
-    } else if (caseFix(playerChoice) == 'Scissors' && cpuChoice == 'Paper') {
-        console.log('You win!');
-    } else {
-        console.log('You tie');
-    }
-    if (caseFix(playerChoice) == 'Paper' && cpuChoice == 'Scissors') {
-        console.log('You lose');
-    } else if (caseFix(playerChoice) == 'Paper' && cpuChoice == 'Rock') {
-        console.log('You win!');
-    } else {
-        console.log('You tie');
-    }    
 }
 console.log(scoring());
